@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TodoTaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('contoh');
-});
+// Route::get('/', [TodoTaskController::class, 'index']);
+
+// Route::get('/pertama', function () {
+//     return view('contoh');
+// });
+
+Route::get('/', [TodoTaskController::class, 'index']);
+Route::post('/', [TodoTaskController::class, 'store']);
+Route::delete('/deleteTask/{id}', [TodoTaskController::class, 'deleteTask']);
+// return view('contoh');

@@ -15,7 +15,7 @@
   {{-- akhir navbar --}}
 
   {{-- content --}}
-  @yield('contect')
+  @yield('content')
   {{-- akhir content --}}
 
   {{-- footer --}}
